@@ -54,8 +54,10 @@ fn main() {
     // Initialize and run the compiler then run then open
     let mut compiler = LolCompiler::new();
 
+    // Compile and give it the whole file
     compiler.compile(&source_code);
     println!("Compiled successfully!");
 
+    // Open the html file
     open_html(filename, compiler);
 }

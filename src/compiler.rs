@@ -80,7 +80,9 @@ impl LolCompiler {
     }
 
     pub fn match_token(&mut self, expected: &str) -> Result<(), String> {
+        // Check if the token we have currently is the same as we expected
         if self.current_token().to_uppercase() == expected.to_uppercase() {
+            // If true then go to the next token
             self.next_token();
             Ok(())
         } else {

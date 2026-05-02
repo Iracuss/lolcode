@@ -75,6 +75,7 @@ impl LexicalAnalyzer for LolCompiler {
         }
     }
 
+    // Just push the character to the end
     fn add_char(&mut self, c: char) {
         self.current_lexeme.push(c);
     }
